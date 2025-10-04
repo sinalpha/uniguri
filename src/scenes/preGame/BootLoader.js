@@ -1,6 +1,12 @@
+
+
 export default class BootLoader extends Phaser.Scene {
     constructor() {
         super({ key: "Bootloader" });
+    }
+
+    init(){
+
     }
 
     preload(){
@@ -66,6 +72,9 @@ export default class BootLoader extends Phaser.Scene {
         this.load.image("poop", assetsImgPath + "poop.png")
         this.load.image("background-splash", assetsImgPath + "background-splash.png");
         this.load.image("testButton", assetsImgPath + "testbutton.png");
+        this.load.image("button-food", assetsImgPath + "음식.png");
+        this.load.image("button-sleep", assetsImgPath + "수면.png");
+        this.load.image("button-status", assetsImgPath + "상태.png");
         
     }
 

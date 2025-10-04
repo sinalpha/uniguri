@@ -2,19 +2,22 @@ export default class DownScene extends Phaser.Scene {
 	
 	setCameraViewPort(downSceneScreenSize){
 
-		this.downSceneScreenSize = downSceneScreenSize;
+		this.screenSize = downSceneScreenSize;
+		
 		this.origin = {
-			width: this.scale.gameSize.height - this.downSceneScreenSize,
-			height: 0
+			x: 0,
+			y: this.cameras.main.height - this.screenSize.height
 		}
 
 		this.cameras.main.setViewport(
-			this.origin.width,
-			this.origin.height, 
-			this.downSceneScreenSize.width,
-			this.downSceneScreenSize.height);
+			this.origin.x,
+			Phaser.Math.FloorTo(this.origin.y), 
+			Phaser.Math.CeilTo(this.screenSize.width),
+			Phaser.Math.CeilTo(this.screenSize.height));
 
-		this.cameras.main.setBackgroundColor(0x111111);
+		this.cameras.main.setBackgroundColor(0x0000ff);
+
+		this.center = { x:this.screenSize.width / 2, y:this.screenSize.height / 2 }
 		
 	}
 

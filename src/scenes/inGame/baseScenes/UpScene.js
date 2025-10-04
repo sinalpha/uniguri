@@ -2,15 +2,15 @@ export default class UpScene extends Phaser.Scene{
 
 	setCameraViewPort(upSceneScreenSize){
 
-		this.upSceneScreenSize = upSceneScreenSize;
+		this.screenSize = upSceneScreenSize;
 
 		this.cameras.main.setViewport(
 			0,
 			0, 
-			this.upSceneScreenSize.width,
-			this.upSceneScreenSize.height);
+			Phaser.Math.CeilTo(this.screenSize.width),
+			Phaser.Math.CeilTo(this.screenSize.height));
 
-		this.cameras.main.setBackgroundColor(0x222222);
+		this.cameras.main.setBackgroundColor(0x00ff00);
 	
 	}
 }

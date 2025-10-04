@@ -7,9 +7,7 @@ export default class Splash extends Phaser.Scene {
 
     init(){
 
-
         this.addResizeEventListner();
-        
 
     }
 

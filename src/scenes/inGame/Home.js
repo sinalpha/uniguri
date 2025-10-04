@@ -5,11 +5,11 @@ export default class Home extends UpScene{
 
     init(data){
 
-        this.setCameraViewPort(data.screenSize);
+        this.setCameraViewPort(data);
         
         this.physics.world.setBounds(0, 0, 
-            this.screenSize.width,
-            this.screenSize.height);
+            this.size.width,
+            this.size.height);
 
     }
 
@@ -24,8 +24,8 @@ export default class Home extends UpScene{
 
         this.uniguri = this.add.existing(new Uniguri(
             this,
-            this.screenSize.width / 2,
-            this.screenSize.height,
+            this.size.width / 2,
+            this.size.height,
             'uniguri-default'));
         
     }

@@ -5,7 +5,7 @@ export default class Menu extends DownScene {
     
     init(data){
         
-        this.setCameraViewPort(data.screenSize);
+        this.setCameraViewPort(data);
 
         this.buttons = {
             food : new Button(this, this.center.x - 120, this.center.y, "button-food"),
